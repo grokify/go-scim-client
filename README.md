@@ -1,4 +1,4 @@
-# Go API client for scim
+# Go API client for SCIM
 
 SCIM V2 API implemented by RingCentral
 
