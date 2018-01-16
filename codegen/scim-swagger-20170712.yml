@@ -1,0 +1,664 @@
+---
+swagger: "2.0"
+info:
+  description: "SCIM V2 API implemented by RingCentral"
+  version: "0.1.0"
+  title: "SCIM API"
+host: "platform.ringcentral.com"
+basePath: "/scim/v2"
+tags:
+- name: "SCIM"
+- name: "SCIM V2"
+- name: "ServiceProviderConfig"
+- name: "User"
+schemes:
+- "https"
+consumes:
+- "application/json"
+- "application/scim+json"
+produces:
+- "application/json"
+- "application/scim+json"
+paths:
+  /ServiceProviderConfig:
+    get:
+      tags:
+      - "ServiceProviderConfig"
+      summary: "get service provider config"
+      operationId: "getServiceProviderConfig"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ServiceProviderConfig"
+  /Users:
+    get:
+      tags:
+      - "User"
+      summary: "search or list users"
+      operationId: "searchViaGet"
+      parameters:
+      - name: "filter"
+        in: "query"
+        description: "only support 'userName' or 'email' filter expressions for now"
+        required: false
+        type: "string"
+      - name: "startIndex"
+        in: "query"
+        description: "start index (1-based)"
+        required: false
+        type: "integer"
+        default: 1
+        format: "int32"
+      - name: "count"
+        in: "query"
+        description: "page size"
+        required: false
+        type: "integer"
+        default: 100
+        format: "int32"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/UserSearchResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      tags:
+      - "User"
+      summary: "create a user"
+      operationId: "createUser"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "a new user without 'id'"
+        required: false
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        201:
+          description: "successfully created user"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        409:
+          description: "duplicate email"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /Users/.search:
+    post:
+      tags:
+      - "User"
+      summary: "search or list users"
+      operationId: "searchViaPost"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "search parameters"
+        required: false
+        schema:
+          $ref: "#/definitions/SearchRequest"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/UserSearchResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /Users/{id}:
+    get:
+      tags:
+      - "User"
+      summary: "get a user by id"
+      operationId: "getUserById"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    put:
+      tags:
+      - "User"
+      summary: "fully update/replace a user"
+      operationId: "replaceUser"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "an existing user"
+        required: false
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        200:
+          description: "successfully fully updated a user"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        409:
+          description: "duplicate email"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    delete:
+      tags:
+      - "User"
+      summary: "delete a user"
+      operationId: "deleteUser"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: "successfully deleted"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    patch:
+      tags:
+      - "User"
+      summary: "partially update/patch a user"
+      operationId: "patchUser"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "patch operations list"
+        required: false
+        schema:
+          $ref: "#/definitions/UserPatch"
+      responses:
+        200:
+          description: "successfully partially updated user"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        409:
+          description: "duplicate email"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+securityDefinitions:
+  OAuth2:
+    type: "oauth2"
+    authorizationUrl: ""
+    tokenUrl: ""
+    flow: "accessCode"
+definitions:
+  Address:
+    type: "object"
+    required:
+    - "type"
+    properties:
+      country:
+        type: "string"
+      locality:
+        type: "string"
+      postalCode:
+        type: "string"
+      region:
+        type: "string"
+      streetAddress:
+        type: "string"
+      type:
+        type: "string"
+        enum:
+        - "work"
+  AuthenticationScheme:
+    type: "object"
+    properties:
+      description:
+        type: "string"
+      documentationUrl:
+        type: "string"
+      name:
+        type: "string"
+      specUrl:
+        type: "string"
+  AuthenticationSchemes:
+    type: "object"
+    properties:
+      authenticationSchemes:
+        type: "array"
+        items:
+          $ref: "#/definitions/AuthenticationScheme"
+  BulkSupported:
+    type: "object"
+    properties:
+      maxOperations:
+        type: "integer"
+        format: "int32"
+      maxPayloadSize:
+        type: "integer"
+        format: "int32"
+      supported:
+        type: "boolean"
+        default: false
+  Email:
+    type: "object"
+    required:
+    - "type"
+    - "value"
+    properties:
+      type:
+        type: "string"
+        enum:
+        - "work"
+      value:
+        type: "string"
+  EnterpriseUser:
+    type: "object"
+    properties:
+      department:
+        type: "string"
+  ErrorResponse:
+    type: "object"
+    properties:
+      detail:
+        type: "string"
+        description: "detail error message"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:api:messages:2.0:Error"
+      scimType:
+        type: "string"
+        description: "bad request type when status code is 400"
+        enum:
+        - "uniqueness"
+        - "tooMany"
+        - "mutability"
+        - "sensitive"
+        - "invalidSyntax"
+        - "invalidFilter"
+        - "invalidPath"
+        - "invalidValue"
+        - "invalidVers"
+        - "noTarget"
+      status:
+        type: "string"
+        description: "same as HTTP status code, e.g. 400, 401, etc."
+  FilterSupported:
+    type: "object"
+    properties:
+      maxResults:
+        type: "integer"
+        format: "int32"
+      supported:
+        type: "boolean"
+        default: false
+  Meta:
+    type: "object"
+    properties:
+      created:
+        type: "string"
+        format: "date-time"
+      lastModified:
+        type: "string"
+        format: "date-time"
+      location:
+        type: "string"
+        description: "resource location URI"
+      resourceType:
+        type: "string"
+        enum:
+        - "User"
+        - "Group"
+    description: "resource metadata"
+  Name:
+    type: "object"
+    required:
+    - "familyName"
+    - "givenName"
+    properties:
+      familyName:
+        type: "string"
+      givenName:
+        type: "string"
+  PatchOperation:
+    type: "object"
+    required:
+    - "op"
+    properties:
+      op:
+        type: "string"
+        enum:
+        - "add"
+        - "replace"
+        - "remove"
+      path:
+        type: "string"
+      value:
+        type: "object"
+        description: "corresponding 'value' of that field specified by 'path'"
+  PhoneNumber:
+    type: "object"
+    required:
+    - "type"
+    - "value"
+    properties:
+      type:
+        type: "string"
+        enum:
+        - "work"
+        - "mobile"
+        - "other"
+      value:
+        type: "string"
+  Photo:
+    type: "object"
+    required:
+    - "type"
+    - "value"
+    properties:
+      type:
+        type: "string"
+        enum:
+        - "photo"
+      value:
+        type: "string"
+  SearchRequest:
+    type: "object"
+    properties:
+      count:
+        type: "integer"
+        format: "int32"
+        description: "page size"
+      filter:
+        type: "string"
+        description: "only support 'userName' or 'email' filter expressions for now"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:api:messages:2.0:SearchRequest"
+      startIndex:
+        type: "integer"
+        format: "int32"
+        description: "start index (1-based)"
+  ServiceProviderConfig:
+    type: "object"
+    properties:
+      authenticationSchemes:
+        $ref: "#/definitions/AuthenticationSchemes"
+      bulk:
+        $ref: "#/definitions/BulkSupported"
+      changePassword:
+        $ref: "#/definitions/Supported"
+      etag:
+        $ref: "#/definitions/Supported"
+      filter:
+        $ref: "#/definitions/FilterSupported"
+      patch:
+        $ref: "#/definitions/Supported"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"
+      sort:
+        $ref: "#/definitions/Supported"
+      xmlDataFormat:
+        $ref: "#/definitions/Supported"
+  Supported:
+    type: "object"
+    properties:
+      supported:
+        type: "boolean"
+        default: false
+  User:
+    type: "object"
+    required:
+    - "emails"
+    - "name"
+    - "schemas"
+    - "userName"
+    properties:
+      active:
+        type: "boolean"
+        description: "user status"
+        default: false
+      addresses:
+        type: "array"
+        items:
+          $ref: "#/definitions/Address"
+      emails:
+        type: "array"
+        items:
+          $ref: "#/definitions/Email"
+      externalId:
+        type: "string"
+        description: "external unique resource id defined by provisioning client"
+      id:
+        type: "string"
+        description: "unique resource id defined by RingCentral"
+      name:
+        $ref: "#/definitions/Name"
+      phoneNumbers:
+        type: "array"
+        items:
+          $ref: "#/definitions/PhoneNumber"
+      photos:
+        type: "array"
+        items:
+          $ref: "#/definitions/Photo"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:schemas:core:2.0:User"
+      urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:
+        $ref: "#/definitions/EnterpriseUser"
+      userName:
+        type: "string"
+        description: "MUST be same as work type email address"
+  UserPatch:
+    type: "object"
+    required:
+    - "Operations"
+    - "schemas"
+    properties:
+      Operations:
+        type: "array"
+        description: "patch operations list"
+        items:
+          $ref: "#/definitions/PatchOperation"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:api:messages:2.0:PatchOp"
+  UserResponse:
+    allOf:
+      - $ref: "#/definitions/User"
+      - type: "object"
+        properties:
+          meta:
+            $ref: "#/definitions/Meta"
+  UserSearchResponse:
+    type: "object"
+    properties:
+      Resources:
+        type: "array"
+        description: "user list"
+        items:
+          $ref: "#/definitions/UserResponse"
+      itemsPerPage:
+        type: "integer"
+        format: "int64"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - urn:ietf:params:scim:api:messages:2.0:ListResponse
+      startIndex:
+        type: "integer"
+        format: "int64"
+      totalResults:
+        type: "integer"
+        format: "int64"

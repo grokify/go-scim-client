@@ -1,0 +1,13 @@
+mode: development
+mwagger-codegen-cli.jar META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+mode: development
+package: io.swagger
+implementation-version: 2.3.0
+Built-By: ron.ratovsky
+Created-By: Apache Maven 3.5.0
+Build-Jdk: 1.8.0_144
+url: https://github.com/swagger-api/swagger-codegen/modules/swagger-co
+ degen-cli
+Main-Class: io.swagger.codegen.SwaggerCodegende: development
+mode: development
