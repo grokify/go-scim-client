@@ -1,5 +1,11 @@
 # Go API client for SCIM
 
+[![Used By][used-by-svg]][used-by-url]
+[![Build Status][build-status-svg]][build-status-url]
+[![Go Report Card][goreport-svg]][goreport-url]
+[![Docs][docs-godoc-svg]][docs-godoc-url]
+[![License][license-svg]][license-url]
+
 SCIM V2 API implemented by RingCentral
 
 ## Overview
@@ -81,4 +87,13 @@ Or via OAuth2 module to automatically refresh tokens and perform user authentica
     r, err := client.Service.Operation(auth, args)
 ```
 
-## Author
+ [used-by-svg]: https://sourcegraph.com/github.com/grokify/go-scim-client/-/badge.svg
+ [used-by-url]: https://sourcegraph.com/github.com/grokify/go-scim-client?badge
+ [build-status-svg]: https://github.com/grokify/go-scim-client/workflows/build/badge.svg
+ [build-status-url]: https://github.com/grokify/go-scim-client/actions
+ [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/go-scim-client
+ [goreport-url]: https://goreportcard.com/report/github.com/grokify/go-scim-client
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/grokify/go-scim-client
+ [docs-godoc-url]: https://pkg.go.dev/github.com/grokify/go-scim-client
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-url]: https://github.com/grokify/go-scim-client/blob/master/LICENSE.md
