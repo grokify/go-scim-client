@@ -7,8 +7,7 @@ require (
 	github.com/getkin/kin-openapi v0.34.0 // indirect
 	github.com/go-openapi/swag v0.19.12 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
-	github.com/grokify/gotilla v1.3.5 // indirect
-	github.com/grokify/swaggman v1.1.0
+	github.com/grokify/swaggman v1.1.1
 	github.com/sirupsen/logrus v1.7.0 // indirect
 	github.com/valyala/quicktemplate v1.6.3 // indirect
 	golang.org/x/net v0.0.0-20201224014010-6772e930b67b
