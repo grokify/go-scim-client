@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/grokify/spectrum v1.13.0
-	golang.org/x/net v0.1.0
+	golang.org/x/net v0.2.0
 	golang.org/x/oauth2 v0.0.0-20221014153046-6fdb5e3db783
 )
 
