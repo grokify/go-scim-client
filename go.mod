@@ -3,8 +3,8 @@ module github.com/grokify/go-scim-client
 go 1.18
 
 require (
-	github.com/grokify/spectrum v1.15.0
-	golang.org/x/net v0.2.0
+	github.com/grokify/spectrum v1.16.1
+	golang.org/x/net v0.4.0
 	golang.org/x/oauth2 v0.2.0
 )
 
@@ -16,8 +16,8 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/grokify/base36 v1.0.5 // indirect
-	github.com/grokify/gocharts/v2 v2.8.5 // indirect
-	github.com/grokify/mogo v0.41.10 // indirect
+	github.com/grokify/gocharts/v2 v2.8.6 // indirect
+	github.com/grokify/mogo v0.43.0 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
 	github.com/invopop/yaml v0.2.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
@@ -37,9 +37,9 @@ require (
 	github.com/xuri/efp v0.0.0-20220603152613-6918739fd470 // indirect
 	github.com/xuri/excelize/v2 v2.6.1 // indirect
 	github.com/xuri/nfp v0.0.0-20220409054826-5e722a1d9e22 // indirect
-	golang.org/x/crypto v0.3.0 // indirect
-	golang.org/x/exp v0.0.0-20221126150942-6ab00d035af9 // indirect
-	golang.org/x/text v0.4.0 // indirect
+	golang.org/x/crypto v0.4.0 // indirect
+	golang.org/x/exp v0.0.0-20221215174704-0915cd710c24 // indirect
+	golang.org/x/text v0.5.0 // indirect
 	gonum.org/v1/gonum v0.12.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
