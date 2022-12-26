@@ -10,14 +10,14 @@ require (
 
 require (
 	github.com/buger/jsonparser v1.1.1 // indirect
-	github.com/getkin/kin-openapi v0.111.0 // indirect
+	github.com/getkin/kin-openapi v0.112.0 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/swag v0.22.3 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/grokify/base36 v1.0.5 // indirect
-	github.com/grokify/gocharts/v2 v2.8.6 // indirect
-	github.com/grokify/mogo v0.43.0 // indirect
+	github.com/grokify/gocharts/v2 v2.8.7 // indirect
+	github.com/grokify/mogo v0.44.0 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
 	github.com/invopop/yaml v0.2.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
