@@ -3,7 +3,7 @@ module github.com/grokify/go-scim-client
 go 1.18
 
 require (
-	github.com/grokify/spectrum v1.16.2
+	github.com/grokify/spectrum v1.16.3
 	golang.org/x/net v0.4.0
 	golang.org/x/oauth2 v0.3.0
 )
