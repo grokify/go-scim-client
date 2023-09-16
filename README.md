@@ -89,7 +89,7 @@ Or via OAuth2 module to automatically refresh tokens and perform user authentica
 
  [used-by-svg]: https://sourcegraph.com/github.com/grokify/go-scim-client/-/badge.svg
  [used-by-url]: https://sourcegraph.com/github.com/grokify/go-scim-client?badge
- [build-status-svg]: https://github.com/grokify/go-scim-client/workflows/go%20build/badge.svg?branch=master
+ [build-status-svg]: https://github.com/grokify/go-scim-client/workflows/test/badge.svg?branch=master
  [build-status-url]: https://github.com/grokify/go-scim-client/actions
  [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/go-scim-client
  [goreport-url]: https://goreportcard.com/report/github.com/grokify/go-scim-client
