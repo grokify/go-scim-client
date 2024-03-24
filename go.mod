@@ -7,7 +7,7 @@ go 1.21
 require (
 	github.com/grokify/spectrum v1.18.2
 	golang.org/x/net v0.22.0
-	golang.org/x/oauth2 v0.16.0
+	golang.org/x/oauth2 v0.18.0
 )
 
 require (
