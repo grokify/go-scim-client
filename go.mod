@@ -17,7 +17,7 @@ require (
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/grokify/base36 v1.0.5 // indirect
 	github.com/grokify/gocharts/v2 v2.18.2 // indirect
-	github.com/grokify/mogo v0.63.3 // indirect
+	github.com/grokify/mogo v0.63.5 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
 	github.com/invopop/yaml v0.2.0 // indirect
@@ -39,7 +39,7 @@ require (
 	github.com/xuri/excelize/v2 v2.8.1 // indirect
 	github.com/xuri/nfp v0.0.0-20240318013403-ab9948c2c4a7 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
-	golang.org/x/exp v0.0.0-20240318143956-a85f2c67cd81 // indirect
+	golang.org/x/exp v0.0.0-20240325151524-a685a6edb6d8 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	gonum.org/v1/gonum v0.15.0 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
