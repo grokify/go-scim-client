@@ -7,7 +7,7 @@ toolchain go1.22.1
 require (
 	github.com/grokify/spectrum v1.18.5
 	golang.org/x/net v0.24.0
-	golang.org/x/oauth2 v0.19.0
+	golang.org/x/oauth2 v0.20.0
 )
 
 require (
