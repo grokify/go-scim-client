@@ -15,10 +15,10 @@ github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeN
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
 github.com/grokify/base36 v1.0.5 h1:iUgnt40hrPtn3M2gjU4Darow5ikf8xWXrTuMWTLziCk=
 github.com/grokify/base36 v1.0.5/go.mod h1:L+1aaUBGfp5Ctar7KCS5G9uPABo1Ccu1Ct2iQAuhOJ4=
-github.com/grokify/gocharts/v2 v2.19.8 h1:r9cYGngtRCFdmIkZQuL3eXNZ51/Eka/2/QOpKSiPMoQ=
-github.com/grokify/gocharts/v2 v2.19.8/go.mod h1:Jrt8PBFCHHgcQSbfc+Pz+kg0miGuhwCZJVELWMp6b94=
-github.com/grokify/mogo v0.64.8 h1:Oi7X6EWIaBVPLirrP8DAAMcTgQzUHBqag36yjBzMwTU=
-github.com/grokify/mogo v0.64.8/go.mod h1:qD4Zz/GTGquZ7prO4A7h3kT7ZntMshXLk1lXdviKkUI=
+github.com/grokify/gocharts/v2 v2.20.0 h1:H+7AfoNJBWZTdQtDSOJmxMi7vSiHHQ51fZOvk3bA0uk=
+github.com/grokify/gocharts/v2 v2.20.0/go.mod h1:29218Yun0/uoYId4YB+3P1DVHpeX+uy1dWUwR6MzfQI=
+github.com/grokify/mogo v0.64.10 h1:zK8xzDFXmCwYyoTp72urPMv/X/DuBLtX51/oVJOO3IM=
+github.com/grokify/mogo v0.64.10/go.mod h1:zZsDlAknrt0pTHGeNpm3ZNaUTHSGQoIL6qtmjx0IB0I=
 github.com/grokify/spectrum v1.18.8 h1:wGnvMUolKEe8QmJvdkSE0jLlGwpcnIhbrOftpCVr4mI=
 github.com/grokify/spectrum v1.18.8/go.mod h1:+eZH7iJlcJn1tjdQKrOwD3lVkBHNWDZHCpMgm0DOGy4=
 github.com/huandu/xstrings v1.5.0 h1:2ag3IFq9ZDANvthTwTiqSSZLjDc+BedvHPAp5tJy2TI=
@@ -85,8 +85,8 @@ github.com/xuri/nfp v0.0.0-20240318013403-ab9948c2c4a7 h1:hPVCafDV85blFTabnqKgNh
 github.com/xuri/nfp v0.0.0-20240318013403-ab9948c2c4a7/go.mod h1:WwHg+CVyzlv/TX9xqBFXEZAuxOPxn2k1GNHwG41IIUQ=
 golang.org/x/crypto v0.26.0 h1:RrRspgV4mU+YwB4FYnuBoKsUapNIL5cohGAmSH3azsw=
 golang.org/x/crypto v0.26.0/go.mod h1:GY7jblb9wI+FOo5y8/S2oY4zWP07AkOJ4+jxCqdqn54=
-golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa h1:ELnwvuAXPNtPk1TJRuGkI9fDTwym6AYBu0qzT8AcHdI=
-golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa/go.mod h1:akd2r19cwCdwSwWeIdzYQGa/EZZyqcOdwWiwj5L5eKQ=
+golang.org/x/exp v0.0.0-20240823005443-9b4947da3948 h1:kx6Ds3MlpiUHKj7syVnbp57++8WpuKPcR5yjLBjvLEA=
+golang.org/x/exp v0.0.0-20240823005443-9b4947da3948/go.mod h1:akd2r19cwCdwSwWeIdzYQGa/EZZyqcOdwWiwj5L5eKQ=
 golang.org/x/image v0.19.0 h1:D9FX4QWkLfkeqaC62SonffIIuYdOk/UE2XKUBgRIBIQ=
 golang.org/x/image v0.19.0/go.mod h1:y0zrRqlQRWQ5PXaYCOMLTW2fpsxZ8Qh9I/ohnInJEys=
 golang.org/x/net v0.28.0 h1:a9JDOJc5GMUJ0+UDqmLT86WiEy7iWyIhz8gz8E4e5hE=
