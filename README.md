@@ -1,7 +1,6 @@
 # Go API client for SCIM
 
 [![Build Status][build-status-svg]][build-status-url]
-[![Go Report Card][goreport-svg]][goreport-url]
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
 
@@ -90,8 +89,6 @@ Or via OAuth2 module to automatically refresh tokens and perform user authentica
  [used-by-url]: https://sourcegraph.com/github.com/grokify/go-scim-client?badge
  [build-status-svg]: https://github.com/grokify/go-scim-client/actions/workflows/ci.yaml/badge.svg?branch=master
  [build-status-url]: https://github.com/grokify/go-scim-client/actions/workflows/ci.yaml
- [goreport-svg]: https://goreportcard.com/badge/github.com/grokify/go-scim-client
- [goreport-url]: https://goreportcard.com/report/github.com/grokify/go-scim-client
  [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/grokify/go-scim-client
  [docs-godoc-url]: https://pkg.go.dev/github.com/grokify/go-scim-client
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
