@@ -1,8 +1,26 @@
 # Go API client for SCIM
 
-[![Build Status][build-status-svg]][build-status-url]
+[![Go CI][go-ci-svg]][go-ci-url]
 [![Docs][docs-godoc-svg]][docs-godoc-url]
+[![Visualization][viz-svg]][viz-url]
 [![License][license-svg]][license-url]
+
+ [go-ci-svg]: https://github.com/grokify/go-scim-client/actions/workflows/go-ci.yaml/badge.svg?branch=main
+ [go-ci-url]: https://github.com/grokify/go-scim-client/actions/workflows/go-ci.yaml
+ [go-lint-svg]: https://github.com/grokify/go-scim-client/actions/workflows/go-lint.yaml/badge.svg?branch=main
+ [go-lint-url]: https://github.com/grokify/go-scim-client/actions/workflows/go-lint.yaml
+ [go-sast-svg]: https://github.com/grokify/go-scim-client/actions/workflows/go-sast-codeql.yaml/badge.svg?branch=main
+ [go-sast-url]: https://github.com/grokify/go-scim-client/actions/workflows/go-sast-codeql.yaml
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/grokify/go-scim-client
+ [docs-godoc-url]: https://pkg.go.dev/github.com/grokify/go-scim-client
+ [docs-mkdoc-svg]: https://img.shields.io/badge/Go-dev%20guide-blue.svg
+ [docs-mkdoc-url]: https://grokify.github.io/go-scim-client
+ [viz-svg]: https://img.shields.io/badge/visualizaton-Go-blue.svg
+ [viz-url]: https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=grokify%2Fgo-scim-client
+ [loc-svg]: https://tokei.rs/b1/github/grokify/go-scim-client
+ [repo-url]: https://github.com/grokify/go-scim-client
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-url]: https://github.com/grokify/go-scim-client/blob/main/LICENSE
 
 SCIM V2 API implemented by RingCentral
 
@@ -84,12 +102,3 @@ Or via OAuth2 module to automatically refresh tokens and perform user authentica
 	auth := context.WithValue(oauth2.NoContext, sw.ContextOAuth2, tokenSource)
     r, err := client.Service.Operation(auth, args)
 ```
-
- [used-by-svg]: https://sourcegraph.com/github.com/grokify/go-scim-client/-/badge.svg
- [used-by-url]: https://sourcegraph.com/github.com/grokify/go-scim-client?badge
- [build-status-svg]: https://github.com/grokify/go-scim-client/actions/workflows/ci.yaml/badge.svg?branch=master
- [build-status-url]: https://github.com/grokify/go-scim-client/actions/workflows/ci.yaml
- [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/grokify/go-scim-client
- [docs-godoc-url]: https://pkg.go.dev/github.com/grokify/go-scim-client
- [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
- [license-url]: https://github.com/grokify/go-scim-client/blob/master/LICENSE.md
