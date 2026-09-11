@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/grokify/spectrum v1.21.0
-	golang.org/x/net v0.58.0
+	golang.org/x/net v0.59.0
 	golang.org/x/oauth2 v0.36.0
 )
 
@@ -41,11 +41,11 @@ require (
 	github.com/xuri/excelize/v2 v2.11.0 // indirect
 	github.com/xuri/nfp v0.0.2-0.20250530014748-2ddeb826f9a9 // indirect
 	go.yaml.in/yaml/v2 v2.4.4 // indirect
-	golang.org/x/crypto v0.55.0 // indirect
+	golang.org/x/crypto v0.57.0 // indirect
 	golang.org/x/exp v0.0.0-20260820142414-ca536658362e // indirect
 	golang.org/x/image v0.45.0 // indirect
-	golang.org/x/sys v0.47.0 // indirect
-	golang.org/x/text v0.41.0 // indirect
+	golang.org/x/sys v0.48.0 // indirect
+	golang.org/x/text v0.42.0 // indirect
 	gonum.org/v1/gonum v0.17.0 // indirect
 	sigs.k8s.io/yaml v1.6.0 // indirect
 )
